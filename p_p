@@ -1,0 +1,19 @@
+.PROGRAM p_p(pp, pd)
+        SPEED 20
+        APPRO pp, 80
+        BREAK
+        MOVES pp
+        CLOSEI
+        SPEED 20
+        DEPARTS 80
+        BREAK
+        SPEED 20
+        APPRO pd, 80
+        BREAK
+        MOVES pd
+        OPENI
+        SPEED 20
+        DEPARTS 80
+        BREAK
+.END
+
