@@ -1,0 +1,17 @@
+.PROGRAM palletizing()
+        TOOL TRANS(0,0,25)
+        PARAMETER HAND.TIME = 0.4
+        SPEED 95 ALWAYS
+        MOVE safe
+        OPENI
+        dx = 40
+        dy = 100
+        WAIT SIG(1001)
+        FOR i = 0 TO 7
+            SET pick = SHIFT(p1 BY (i MOD 4)*dx,0,-INT(i/4)*10)
+            SET place = SHIFT(p2 BY 0,(i MOD 4)*dy,INT(i/4)*10)
+            CALL p_p(pick, place)
+        END
+        MOVE safe
+.END
+
